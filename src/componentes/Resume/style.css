@@ -1,0 +1,99 @@
+.resume{
+    font-family: "Rubik";
+    font-style: normal;
+  }
+  
+  .container-resume {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+    margin-bottom: 20px;
+    color: #2F2F2F;
+  }
+  
+  .container-resume h3 {
+    margin: 0;
+    display: block;
+  
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  
+  .container-resume span {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px; 
+  }
+  
+  .container-resume strong {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .in, .out {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+  }
+  
+  .in {
+    color: #645FFB;
+  }
+  
+  .out {
+    color: #FA8C10;
+  }
+  
+  .horizontal-line {
+    width: 90%;
+    border-bottom: 1px solid #EAEAEA;
+  }
+  
+  .balance {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #3A9FF1;
+  }
+  
+  .container-resume-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-add {
+    all: unset;
+  
+    width: 250px;
+    height: 42px;
+  
+    
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+  
+    background: linear-gradient(91.26deg, #FA8C10 0%, #FF57D3 97.77%);
+    border-radius: 5px;
+  
+    cursor: pointer;
+  }

@@ -1,0 +1,148 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: rgba(61, 61, 61, 0.48);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  position: absolute;
+  width: 430px;
+  height: 560px;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 40px;
+
+  font-family: "Rubik";
+  font-style: normal;
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 43px;
+
+  margin-bottom: 20px;
+}
+
+.debit-credit-btns {
+  display: flex;
+  gap: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  margin-bottom: 30px;
+}
+
+.credit-button {
+  all: unset;
+  width: 175px;
+  height: 40px;
+  background: linear-gradient(91.26deg, #05ede3 0%, #3a9ff1 97.77%);
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+}
+
+.debit-button {
+  all: unset;
+  width: 175px;
+  height: 40px;
+  background: linear-gradient(91.66deg, #fa8c10 0%, #ff576b 90.32%);
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+
+.inactive {
+  background: #b9b9b9;
+}
+
+.close-icon {
+  width: 20px;
+  height: 20px;
+
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: -5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 9px;
+  margin-bottom: 15px;
+}
+
+.info label {
+  display:flex;
+  justify-content: flex-start;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #484848;
+}
+
+.info input {
+  width: 350px;
+  height: 35px;
+  background: #ffffff;
+  border: 1px solid #555555;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  padding: 8px;
+}
+
+button {
+  all: unset;
+  margin-top: 10px;
+  width: 236px;
+  height: 38px;
+
+  background: #645ffb;
+  border-radius: 5px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.modalHidden {
+  display: none;
+}

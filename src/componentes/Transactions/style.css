@@ -1,0 +1,153 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  .table {
+    width: 900px;
+  }
+  
+  .table-head {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .column-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .table-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-head, .table-line{
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+  
+    font-family: "Lato";
+    font-style: normal;
+  }
+  
+  .table-head span, .table-line span {
+    width: 160px;
+    text-align: center;
+  }
+  
+  .table-line {
+    border-bottom: 1px solid #E0E0E0;
+  
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #000000;
+  }
+  
+  .credit {
+    font-weight: bold;
+    color: #7B61FF;
+  }
+  
+  .debit {
+    font-weight: bold;
+    color: #FA8C10;
+  }
+  
+  .edit-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  } 
+  
+  .arrow {
+    margin-top: -10px;
+    margin-bottom: -6px;
+    margin-left: 2px;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .container-confirm-delete {
+    position: absolute;
+  
+    max-width: 111px;
+    height: 46px;
+    background: #E4F2FD;
+    border-radius: 4px;
+  
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    color: #000000;
+  
+    gap: 6px;
+    padding: 7px 15px;
+  }
+  
+  .btn-actions-confirm-delete{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+  }
+  
+  .btn-action-confirm, .btn-action-delete {
+    all: unset;
+    width: 37px;
+    height: 15px;
+  
+    border-radius: 4px;
+  
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .btn-action-confirm{
+    background: #3A9FF1;
+  }
+  
+  .btn-action-delete{
+    background: #FF576B;
+  }
+  

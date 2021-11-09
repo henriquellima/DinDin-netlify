@@ -1,0 +1,174 @@
+.open-filters-button {
+  border: none;
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+
+  margin-bottom: 5px;
+
+  gap: 4px;
+} 
+
+.container-filters{
+  display: flex;
+  justify-content: space-between;
+
+  width: 900px;
+  height: 213px;
+
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  padding: 25px 45px 25px 5px;
+
+  font-family: "Rubik";
+  font-style: normal;
+  
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.blocks{
+  width: 400px;
+  height: 213px;
+
+  padding-left: 25px;
+}
+
+.container-filters h2 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #B9B9B9;
+
+  margin-bottom: 20px;
+}
+
+.container-filters div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.container-filters label {
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 11px;
+  color: #484848;
+}
+
+.container-filters input {
+  width: 65px;
+  height: 22px;
+
+  background: #FFFFFF;
+  border: 1px solid #7B61FF;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  margin-bottom: 14px;
+}
+
+.btns-clear-apply {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  
+  gap: 15px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 80px;
+}
+
+.btn-clear-filters {
+  all: unset;
+
+  width: 98px;
+  height: 30px;
+
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  color: #000000;
+
+  cursor: pointer;
+}
+
+.btn-apply-filters {
+  all: unset;
+
+  width: 98px;
+  height: 30px;
+
+  background: linear-gradient(264.83deg, #3A9FF1 -3.28%, #05EDE3 100%);
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.all-chips {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+}
+
+.container-chip{
+  all: unset;
+
+  width: 60px;
+  height: 15px;
+
+  padding: 4px 10px;
+  
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  margin-bottom: 7px;
+}
+
+.filterIMG{
+  margin-bottom: 0;
+}
