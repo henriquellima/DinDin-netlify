@@ -113,7 +113,7 @@ function Filter({ transactions, putTransactions }) {
   //----FILTER-----
   async function getNoFilterTransactions() {
     setNoFilterTransactions(
-      await (await fetch("http://localhost:3333/transactions")).json()
+      await (await fetch("https://dindin-app-api.herokuapp.com/transactions")).json()
     );
   }
 

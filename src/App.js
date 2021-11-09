@@ -30,7 +30,7 @@ function App() {
 
   async function getTransactions() {
     setLoading(true);
-    let transactions = await fetch("http://localhost:3333/transactions");
+    let transactions = await fetch("https://dindin-app-api.herokuapp.com/transactions");
 
     setTransactions(
       (await transactions.json()).sort(

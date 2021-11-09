@@ -87,7 +87,7 @@ function ModalEdit({
     };
 
     await fetch(
-      `http://localhost:3333/transactions/${transactionId}`,
+      `https://dindin-app-api.herokuapp.com/transactions/${transactionId}`,
       {
         method: "PUT",
         headers: {

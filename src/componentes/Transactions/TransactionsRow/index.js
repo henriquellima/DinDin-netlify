@@ -47,7 +47,7 @@ function TransactionsLine(props) {
   }
 
   async function deleteRow(transactionID) {
-    await fetch(`http://localhost:3333/transactions/${transactionID}`, {
+    await fetch(`https://dindin-app-api.herokuapp.com/transactions/${transactionID}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/JSON",

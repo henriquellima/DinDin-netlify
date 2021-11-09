@@ -66,7 +66,7 @@ function ModalPost({ getTransactions, closeModal }) {
       type: transactionOption === "debit" ? "debit" : "credit",
     };
 
-    await fetch("http://localhost:3333/transactions", {
+    await fetch("https://dindin-app-api.herokuapp.com/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/JSON",
