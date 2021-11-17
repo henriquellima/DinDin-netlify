@@ -47,8 +47,6 @@ function ModalEdit({
   }
 
   function handleChange({ target }) {
-    console.log(target.value)
-    console.log(target)
     setCurrentTransaction({ ...currentTransaction, [target.id]: target.value });
   }
 

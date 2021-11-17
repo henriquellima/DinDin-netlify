@@ -123,7 +123,6 @@ function Filter({ transactions, putTransactions }) {
       ...filterStatus,
       [event.target.id]: Number(value),
     });
-    console.log(filterStatus)
   }
 
   //----FILTER-----
@@ -138,7 +137,6 @@ function Filter({ transactions, putTransactions }) {
   }, [transactions]);
 
   function applyFilter() {
-    console.log(noFilterTransactions);
     let transactionsFiltred = [...noFilterTransactions];
 
     if (filterStatus.max)
