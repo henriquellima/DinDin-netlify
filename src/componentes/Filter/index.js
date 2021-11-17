@@ -3,6 +3,21 @@ import filterSRC from "../../assets/filter.svg";
 import add from "../../assets/plus.svg";
 import remove from "../../assets/close.svg";
 import "./style.css";
+import IntlCurrencyInput from "react-intl-currency-input";
+
+const currencyConfig = {
+  locale: "pt-BR",
+  formats: {
+    number: {
+      BRL: {
+        style: "currency",
+        currency: "BRL",
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      },
+    },
+  },
+};
 
 function CategoriesChips({ transaction, filterStatus, setFilterStatus }) {
   function handleChangeCategories() {
@@ -103,11 +118,12 @@ function Filter({ transactions, putTransactions }) {
 
   arrayCategories.sort((a, b) => a.category.localeCompare(b.category));
 
-  function handleChangeValues({ target }) {
+  function handleChangeMinMax(event, value) {
     setFilterStatus({
       ...filterStatus,
-      [target.name]: Number(target.value),
+      [event.target.id]: Number(value),
     });
+    console.log(filterStatus)
   }
 
   //----FILTER-----
@@ -127,11 +143,11 @@ function Filter({ transactions, putTransactions }) {
 
     if (filterStatus.max)
       transactionsFiltred = transactionsFiltred.filter(
-        (transaction) => transaction.value <= filterStatus.max
+        (transaction) => transaction.value <= filterStatus.max*100
       );
     if (filterStatus.min)
       transactionsFiltred = transactionsFiltred.filter(
-        (transaction) => transaction.value >= filterStatus.min
+        (transaction) => transaction.value >= filterStatus.min*100
       );
 
     if (filterStatus.categories.length !== 0) {
@@ -204,23 +220,21 @@ function Filter({ transactions, putTransactions }) {
             <h2>Valor</h2>
             <div>
               <label htmlFor="min-value">Min</label>
-              <input
-                id="min-value"
-                onChange={handleChangeValues}
-                name="min"
-                value={filterStatus.min || ""}
-                type="number"
-              ></input>
+              <IntlCurrencyInput currency="BRL"
+             config={currencyConfig}
+             onChange={(event, value, maskedValue) => handleChangeMinMax(event, value)}
+             id='min'
+             value={filterStatus.min}
+              />
             </div>
             <div>
               <label htmlFor="max-value">Max</label>
-              <input
-                id="max-value"
-                onChange={handleChangeValues}
-                name="max"
-                value={filterStatus.max || ""}
-                type="number"
-              ></input>
+              <IntlCurrencyInput currency="BRL"
+             config={currencyConfig}
+             onChange={(event, value, maskedValue) => handleChangeMinMax(event, value)}
+             id='max'
+             value={filterStatus.max}
+              />
             </div>
           </span>
 

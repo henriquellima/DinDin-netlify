@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "../style.css";
 import close from "../../../assets/close-modal.svg";
-import InputMask from 'react-input-mask'
-import IntlCurrencyInput from "react-intl-currency-input"
+import InputMask from 'react-input-mask';
+import IntlCurrencyInput from "react-intl-currency-input";
 
 const currencyConfig = {
   locale: "pt-BR",

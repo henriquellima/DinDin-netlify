@@ -54,12 +54,12 @@ function App() {
 
       <main>
         <div className="filterTable">
-          <Filter
+          {!loading && <Filter
             transactions={transactions}
             putTransactions={(array) => putTransactions(array)}
             getTransactions={getTransactions}
-          />
-
+          />}
+          {loading && <p>Loading...</p>}
           {!loading && (
             <TransactionsFull
               transactions={transactions}
