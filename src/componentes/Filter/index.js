@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
-import filterSRC from "../../assets/filter.svg";
-import add from "../../assets/plus.svg";
-import remove from "../../assets/close.svg";
-import "./style.css";
-import IntlCurrencyInput from "react-intl-currency-input";
+import { useEffect, useState } from 'react';
+import filterSRC from '../../assets/filter.svg';
+import add from '../../assets/plus.svg';
+import remove from '../../assets/close.svg';
+import './style.css';
+import IntlCurrencyInput from 'react-intl-currency-input';
 
 const currencyConfig = {
-  locale: "pt-BR",
+  locale: 'pt-BR',
   formats: {
     number: {
       BRL: {
-        style: "currency",
-        currency: "BRL",
+        style: 'currency',
+        currency: 'BRL',
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       },
@@ -37,8 +37,8 @@ function CategoriesChips({ transaction, filterStatus, setFilterStatus }) {
     <button
       style={{
         backgroundColor: filterStatus.categories.includes(transaction.category)
-          ? "#7B61FF"
-          : "#FAFAFA",
+          ? '#7B61FF'
+          : '#FAFAFA',
       }}
       onClick={handleChangeCategories}
       className="container-chip"
@@ -74,13 +74,13 @@ function WeekDaysChips({ week_day, filterStatus, setFilterStatus }) {
     <button
       style={{
         backgroundColor: filterStatus.week_days.includes(week_day)
-          ? "#7B61FF"
-          : "#FAFAFA",
+          ? '#7B61FF'
+          : '#FAFAFA',
       }}
       onClick={handleChangeWeekDays}
       className="container-chip"
     >
-      {week_day}{" "}
+      {week_day}{' '}
       <img
         className="icon-filter"
         src={filterStatus.week_days.includes(week_day) ? remove : add}
@@ -93,13 +93,13 @@ function WeekDaysChips({ week_day, filterStatus, setFilterStatus }) {
 function Filter({ transactions, putTransactions }) {
   const [showFilter, setShowFilter] = useState(false);
   const [week_days_array] = useState([
-    "Segunda",
-    "Terça",
-    "Quarta",
-    "Quinta",
-    "Sexta",
-    "Sábado",
-    "Domingo",
+    'Segunda',
+    'Terça',
+    'Quarta',
+    'Quinta',
+    'Sexta',
+    'Sábado',
+    'Domingo',
   ]);
   const [noFilterTransactions, setNoFilterTransactions] = useState([]);
   const [filterStatus, setFilterStatus] = useState({
@@ -128,7 +128,9 @@ function Filter({ transactions, putTransactions }) {
   //----FILTER-----
   async function getNoFilterTransactions() {
     setNoFilterTransactions(
-      await (await fetch("https://dindin-app-api.herokuapp.com/transactions")).json()
+      await (
+        await fetch('https://dindin-app-api.herokuapp.com/transactions')
+      ).json()
     );
   }
 
@@ -141,11 +143,11 @@ function Filter({ transactions, putTransactions }) {
 
     if (filterStatus.max)
       transactionsFiltred = transactionsFiltred.filter(
-        (transaction) => transaction.value <= filterStatus.max*100
+        (transaction) => transaction.value <= filterStatus.max * 100
       );
     if (filterStatus.min)
       transactionsFiltred = transactionsFiltred.filter(
-        (transaction) => transaction.value >= filterStatus.min*100
+        (transaction) => transaction.value >= filterStatus.min * 100
       );
 
     if (filterStatus.categories.length !== 0) {
@@ -218,20 +220,28 @@ function Filter({ transactions, putTransactions }) {
             <h2>Valor</h2>
             <div>
               <label htmlFor="min-value">Min</label>
-              <IntlCurrencyInput currency="BRL"
-             config={currencyConfig}
-             onChange={(event, value, maskedValue) => handleChangeMinMax(event, value)}
-             id='min'
-             value={filterStatus.min}
+              <IntlCurrencyInput
+                currency="BRL"
+                style={{
+                  color: filterStatus.min === 0 ? '#ffffff' : '#000000',
+                }}
+                config={currencyConfig}
+                onChange={(event, value) => handleChangeMinMax(event, value)}
+                id="min"
+                value={filterStatus.min}
               />
             </div>
             <div>
               <label htmlFor="max-value">Max</label>
-              <IntlCurrencyInput currency="BRL"
-             config={currencyConfig}
-             onChange={(event, value, maskedValue) => handleChangeMinMax(event, value)}
-             id='max'
-             value={filterStatus.max}
+              <IntlCurrencyInput
+                currency="BRL"
+                style={{
+                  color: filterStatus.max === 0 ? '#ffffff' : '#000000',
+                }}
+                config={currencyConfig}
+                onChange={(event, value) => handleChangeMinMax(event, value)}
+                id="max"
+                value={filterStatus.max}
               />
             </div>
           </span>
